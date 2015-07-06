@@ -10,7 +10,7 @@
     function config($routeProvider) {
         $routeProvider
             .when('/rad', {
-                templateUrl: '/rad/rad.html',
+                templateUrl: 'rad/rad.html',
                 controller: RadController,
                 controllerAs: 'vm'
             });

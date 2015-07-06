@@ -10,7 +10,7 @@
     function config($routeProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: '/awesome/awesome.html',
+                templateUrl: 'awesome/awesome.html',
                 controller: AwesomeController,
                 controllerAs: 'vm'
             });

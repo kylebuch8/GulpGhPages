@@ -15,7 +15,12 @@ gulp.task('serve', function () {
     gulp.watch(["app/**/*.html", "app/**/*.js"]).on("change", browserSync.reload);
 });
 
-gulp.task('build', function () {
+gulp.task('copy', function () {
+    return gulp.src('app/**/*.html', { base: './app' })
+        .pipe(gulp.dest('build/'));
+});
+
+gulp.task('usemin', function () {
     return gulp.src('app/index.html')
         .pipe(usemin({
             vendorjs: [uglify()],
@@ -23,6 +28,8 @@ gulp.task('build', function () {
         }))
         .pipe(gulp.dest('build/'));
 });
+
+gulp.task('build', ['usemin', 'copy']);
 
 gulp.task('deploy', function () {
     return gulp.src('build/**/*')
