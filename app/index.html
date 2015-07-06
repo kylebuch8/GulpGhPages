@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Kyle's Awesome App</title>
+    </head>
+    <body ng-app="awesomeApp">
+
+        <ng-view></ng-view>
+
+        <!-- build:vendorjs vendor.js -->
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js app.js -->
+        <script src="awesome/awesome.js"></script>
+        <script src="rad/rad.js"></script>
+        <script src="app.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>
